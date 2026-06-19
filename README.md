@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# FinVision: Microfinance Loan Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A database-driven loan management platform built for microfinance institutions to streamline loan operations, monitor repayment health, and surface actionable financial insights through intuitive dashboards. 
 
-## Available Scripts
+*Skills: Database Design · SQL · End-to-End System Development · Data Modeling · ETL Pipelines · Business Intelligence · Data Visualization (Superset / Power BI) · Dashboard Development · Risk Analytics · Cloud Infrastructure*
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+FinVision addresses the operational and analytical challenges faced by microfinance institutions by centralizing loan portfolio management, client data, and financial reporting into a single system. The platform supports data-driven decision-making through real-time visibility into loan performance, borrower demographics, and officer-level accountability.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Loan Portfolio Tracking
+- Monitor total disbursed loan amounts, active loan counts, and aggregate portfolio value
+- Categorize loans by type (agricultural, small business, personal) and track status across Active, Overdue, Closed, and Defaulted states
+- Identify top borrowers by loan amount for risk assessment and cross-selling opportunities
 
-### `npm run build`
+### Client Demographics & Segmentation
+- Profile borrowers across age, gender, location, income level, and loan history
+- Segment clients by loan size, business type, and credit history to enable personalized offerings and targeted risk assessment
+- Track client base growth over time, distinguishing new vs. returning borrowers
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Repayment & Delinquency Monitoring
+- Calculate repayment rates and delinquency rates across the portfolio
+- Track repayment trends over time to identify seasonal patterns or the impact of policy changes
+- Flag missed payments and overdue loans for proactive collections management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Financial Performance Monitoring
+- Track interest income (AUM) generated across the lending portfolio
+- Monitor non-AUM revenue streams including processing fees, penalties, and setup fees
+- Compare revenue against operational costs for an at-a-glance view of financial health
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Loan Officer Performance
+- Measure disbursement volume and loan recovery per officer
+- Track delinquency rates by officer to surface accountability and coaching opportunities
+- Log client interaction activity at the officer level
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Database Schema
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Core Tables**
+- `Users` — Borrower profiles and demographic data
+- `Loans` — Loan records including type, amount, status, and assigned officer
+- `Repayments` — Repayment schedules, dates, and amounts
+- `Loan Officers` — Officer profiles and assignment mappings
+- `Transactions` — Financial transaction records including fees and penalties
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Under Review**
+- `Collateral` — Collateral assets tied to loans
+- `Penalty` — Penalty tracking for overdue accounts
+- `Credit History` — Borrower credit history records
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Dashboards
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Dashboard | Key Metrics |
+|---|---|
+| **Loan Portfolio Overview** | Total disbursed, active loan count & value, status distribution, loan type mix, top borrowers |
+| **Repayment & Delinquency** | Repayment rate, delinquency rate, repayment trends over time |
+| **Client Demographics** | Age/gender/income breakdown, client segmentation, client growth over time |
+| **Financial Performance** | Interest income (AUM), non-AUM charges, revenue vs. expense comparison |
+| **Loan Officer Performance** | Disbursement by officer, recovery by officer, delinquency rate by officer, client interactions |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Database:** MYSQL
+- **Visualization:** Power BI 
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+> Developed as part of IST 659 M003 — Group Psi  
+> **Team:** Udayan Gaikwad, Mukta Patil, Sohail Mulla
